@@ -69,7 +69,7 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__demo__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__demo__ = __webpack_require__(1);
 /**
  * Created by zhuzhuxia on 2017/8/6.
  */
@@ -83,13 +83,12 @@ Object(__WEBPACK_IMPORTED_MODULE_0__demo__["a" /* runDemo */])();
 
 
 /***/ }),
-/* 1 */,
-/* 2 */
+/* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (immutable) */ __webpack_exports__["a"] = runDemo;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__watcher__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__watcher__ = __webpack_require__(2);
 /**
  * Created by zhuzhuxia on 2017/8/6.
  */
@@ -131,7 +130,7 @@ function runDemo () {
 }
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -151,6 +150,7 @@ class  Watcher{
         self.callback = callback;
 
         Object.keys(self.data).forEach(function(key,index,keyArray){
+
             var value = self.data[key];
 
             Object.defineProperty(self.data,key,{

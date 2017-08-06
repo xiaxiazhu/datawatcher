@@ -2,7 +2,7 @@
  * Created by zhuzhuxia on 2017/8/6.
  */
 
-import Watcher from './watcher';
+import Watcher from './src/watcher';
 
 
 const OP = Object.prototype;
