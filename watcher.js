@@ -14,6 +14,7 @@ export default class  Watcher{
         self.callback = callback;
 
         Object.keys(self.data).forEach(function(key,index,keyArray){
+
             var value = self.data[key];
 
             Object.defineProperty(self.data,key,{
