@@ -18,7 +18,13 @@ export function runDemo () {
         family:['zhufayu','luzhongying','zhuwenzhong','wuyuping'],
         target:'hold a family money house ',
         current:'have a job and do it',
-        after:'do some bussine or do some management'
+        after:'do some bussine or do some management',
+        tree:{
+            a:'shahala',
+            b:'egypt',
+            c:'ulp'
+
+        }
     };
 
     let callback = function(value){
@@ -29,7 +35,8 @@ export function runDemo () {
 
 
     setTimeout(function(){
-        data.name = 'dead pig';
+        // data.name = 'dead pig';
+        data.tree.a = 'not shahala';
 //      data.family[0] = 'zhuquecheng';
     },2000)
 
