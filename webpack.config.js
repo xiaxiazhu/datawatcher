@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-    entry: './watcherData.js',
+    entry: './main.js',
     output: {
         path: __dirname,
         filename: 'bundle.js'
@@ -20,7 +20,7 @@ module.exports = {
     },
     plugins: [
         // Avoid publishing files when compilation fails
-        new webpack.NoErrorsPlugin()
+        // new webpack.NoErrorsPlugin()
     ],
     stats: {
         // Nice colored output

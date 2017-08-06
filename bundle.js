@@ -69,40 +69,106 @@
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__demo__ = __webpack_require__(2);
 /**
  * Created by zhuzhuxia on 2017/8/6.
  */
 
-const OP = Object.prototype;
 
-class watcherData{
 
-    constructor(obj,callback)
-    {
-        //
-        // this.data = obj;
-        //
-        // this.callback = callback;
-        //
-        // Object.keys(this.data).forEach(function(key,index,keyArray){
-        //     var value = this.data[key];
-        //
-        //     Object.defineProperty(this.data,key,{
-        //         get:function () {
-        //             return this.data[key];
-        //         },
-        //         set:function (newValue) {
-        //             this.callback(newValue);
-        //         }
-        //     }).bind(this);
-        //
-        // });
+Object(__WEBPACK_IMPORTED_MODULE_0__demo__["a" /* runDemo */])();
 
-    }
+
+
+
+
+/***/ }),
+/* 1 */,
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (immutable) */ __webpack_exports__["a"] = runDemo;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__watcher__ = __webpack_require__(3);
+/**
+ * Created by zhuzhuxia on 2017/8/6.
+ */
+
+
+
+
+
+
+function runDemo () {
+
+    console.log('run demo');
+
+    var data = {
+        name:'wulinzhuzhuxia',
+        age:'past birthday gangang',
+        children:'zhufayu',
+        family:['zhufayu','luzhongying','zhuwenzhong','wuyuping'],
+        target:'hold a family money house ',
+        current:'have a job and do it',
+        after:'do some bussine or do some management'
+    };
+
+    let callback = function(value){
+        alert(value);
+    };
+
+    new __WEBPACK_IMPORTED_MODULE_0__watcher__["a" /* default */](data,callback);
+
+
+    setTimeout(function(){
+        data.name = 'dead pig';
+//      data.family[0] = 'zhuquecheng';
+    },2000)
+
+
 
 
 }
-/* harmony export (immutable) */ __webpack_exports__["watcherData"] = watcherData;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/**
+ * Created by zhuzhuxia on 2017/8/6.
+ */
+
+
+class  Watcher{
+
+    constructor(obj,callback)
+    {
+        var self = this;
+
+        self.data = obj;
+
+        self.callback = callback;
+
+        Object.keys(self.data).forEach(function(key,index,keyArray){
+            var value = self.data[key];
+
+            Object.defineProperty(self.data,key,{
+                get:function () {
+                    return self.data[key];
+                },
+                set:function (newValue) {
+                    self.callback(newValue);
+                }
+            });
+
+        });
+    }
+}
+/* harmony export (immutable) */ __webpack_exports__["a"] = Watcher;
+
+
+
 
 
 /***/ })
